@@ -6,8 +6,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Main main = new Main();
-        main.printMatrix();
-        do {
+        while (main.isWinner() != 1 || main.isWinner() != 2) {
             System.out.println("Player 1 turn. Select x,y:");
             main.player1();
             main.printMatrix();
@@ -23,7 +22,7 @@ public class Main {
                     break;
 
             }
-        }while(main.isWinner()!=1 || main.isWinner()!=2);
+        }
     }
 
     int[][] matrix = new int[][]{
